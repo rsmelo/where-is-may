@@ -15,7 +15,7 @@
     }
     
     img.classList.add('img-bkg');
-    img.src = `http://loremflickr.com/${width}/${height}/landscape,nopeople`;
+    img.src = `http://loremflickr.com/${width}/${height}/landscape,nopeople,horizontal`;
     const wrapper = document.getElementById('bkg');
     wrapper.appendChild(img);
 })();
