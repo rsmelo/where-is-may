@@ -25,6 +25,11 @@
   function loadImage(url = defaultUrl) {
     const wrapper = document.getElementById('bkg');
     const img_loaded = document.getElementById("img-loaded");
+
+    if (img_loaded) {
+      wrapper.removeChild(img_loaded);
+    }
+
     const img = new Image();
 
     showOverlay();
@@ -47,6 +52,7 @@
   document.body.addEventListener('keypress', (evt) => {
     if (evt.keyCode == 27) {
       const url = prompt("Insira a URL com o novo paraíso das Mays", defaultUrl);
+      console.log(url);
       loadImage(url);
     }
   });
